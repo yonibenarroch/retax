@@ -3,14 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>החזרי מס</title>
-    <style>
-        body { font-family: Arial, sans-serif; direction: rtl; text-align: center; margin: 50px; }
-        h1 { color: #2c3e50; }
-    </style>
+    <title>החזרי מס - מחשבון פיננסי</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>ברוכים הבאים לאתר החזרי מס!</h1>
-    <p>כאן תוכלו למצוא מידע על החזרי מס ולחשב את ההחזר שלכם.</p>
+    <header>
+        החזרי מס – המדריך הפיננסי שלך
+    </header>
+    <div class="container">
+        <h1>ברוכים הבאים!</h1>
+        <p>כאן תוכלו לקבל מידע על החזרי מס ולחשב את ההחזר שלכם בקלות.</p>
+
+        <!-- טופס לחישוב החזר מס -->
+        <form id="taxForm">
+            <label for="income">הכנסה שנתית (ש"ח):</label>
+            <input type="number" id="income" name="income" placeholder="הכנס את ההכנסה שלך" required>
+
+            <label for="taxPaid">מס ששולם (ש"ח):</label>
+            <input type="number" id="taxPaid" name="taxPaid" placeholder="הכנס את המס ששולם" required>
+
+            <button type="button" onclick="calculateTax()">חשב החזר מס</button>
+        </form>
+
+        <h2 id="result"></h2>
+    </div>
+
+    <script>
+        function calculateTax() {
+            let income = document.getElementById("income").value;
+            let taxPaid = document.getElementById("taxPaid").value;
+            
+            if (income && taxPaid) {
+                let estimatedRefund = (taxPaid - (income * 0.1)).toFixed(2); // חישוב פשוט להחזר משוער
+                if (estimatedRefund > 0) {
+                    document.getElementById("result").innerHTML = "החזר המס המשוער שלך: " + estimatedRefund + " ש\"ח";
+                } else {
+                    document.getElementById("result").innerHTML = "לפי הנתונים שהוזנו, לא צפוי החזר מס.";
+                }
+            } else {
+                document.getElementById("result").innerHTML = "אנא מלא את כל השדות.";
+            }
+        }
+    </script>
 </body>
 </html>
+

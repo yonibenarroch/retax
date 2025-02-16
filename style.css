@@ -1,0 +1,75 @@
+/* עיצוב כללי */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    direction: rtl;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #eef2f3; /* רקע אפור בהיר */
+    color: #2c3e50;
+}
+
+/* עיצוב הכותרת */
+header {
+    background-color: #1b3a57; /* כחול כהה */
+    color: white;
+    padding: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* תיבת תוכן מרכזית */
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: right;
+}
+
+/* עיצוב כותרות */
+h1 {
+    color: #1b3a57;
+    font-size: 28px;
+}
+
+p {
+    font-size: 18px;
+    color: #34495e;
+}
+
+/* כפתור פיננסי */
+button {
+    background-color: #27ae60; /* ירוק פיננסי */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #219150; /* ירוק כהה יותר */
+}
+
+/* עיצוב טפסים */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+}
